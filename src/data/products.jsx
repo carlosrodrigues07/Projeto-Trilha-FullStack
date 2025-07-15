@@ -4,7 +4,7 @@ const products = Array.from({ length: 100 }, (_, i) => ({
   name: `Produto ${i + 1}`,
   description: `Descrição completa do Produto ${i + 1}.`,
   price: (5 + i * 0.75).toFixed(2),
-  image: `/src/assets/imagens${i}.png`, // 10 imagens reutilizadas
+  image: `/src/assets/imagens${i}.png`, 
 }));
 
 export default products;
