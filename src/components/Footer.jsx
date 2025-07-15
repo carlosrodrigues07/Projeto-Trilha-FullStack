@@ -1,3 +1,5 @@
+import "/src/css/Footer.css";
+
 export default function Footer() {
   const companyInfo = {
     name: "Papelaria Pó de Giz",
@@ -8,21 +10,21 @@ export default function Footer() {
   };
 
   return (
-    <footer style={{ background: "#E5EDFC" }} className="bg-gray-500 text-gray-700 py-6 mt-8">
-      <div style={{ display: "flex", justifyContent: "space-around", alignItems: "center" }} className="container mx-auto px-4 flex justify-between items-start gap-8">
-        <p className="text-sm">
+    <footer className="footer">
+      <div className="footer-container">
+        <p className="footer-copy">
           &copy; {new Date().getFullYear()} {companyInfo.name} — Todos os direitos reservados
         </p>
 
-        <div className="text-sm text-right space-y-1">
+        <div className="footer-info">
           <p>{companyInfo.address}</p>
           <p>
-            Telefone: <a href={`tel:${companyInfo.phone}`} className="hover:underline">{companyInfo.phone}</a>
+            Telefone: <a href={`tel:${companyInfo.phone}`}>{companyInfo.phone}</a>
           </p>
           <p>
-            Email: <a href={`mailto:${companyInfo.email}`} className="hover:underline">{companyInfo.email}</a>
+            Email: <a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a>
           </p>
-          {companyInfo.cnpj && <p>CNPJ: {companyInfo.cnpj}</p>}
+          <p>CNPJ: {companyInfo.cnpj}</p>
         </div>
       </div>
     </footer>

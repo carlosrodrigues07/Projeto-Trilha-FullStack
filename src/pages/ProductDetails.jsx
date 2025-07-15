@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import products from "/src/data/products";
 import { useCart } from "/src/context/CardContext";
+import "/src/css/ProductDetails.css"
 
 function ProductDetails() {
   const { id } = useParams();
@@ -10,14 +11,14 @@ function ProductDetails() {
   if (!product) return <p>Produto não encontrado.</p>;
 
   return (
-    <div style={{ paddingBottom: "400px" }}>
-      <img src={product.image} className="w-full max-w-md mx-auto" />
-      <h2>{product.name}</h2>
-      <p>{product.description}</p>
-      <p>Preço: R$ {product.price}</p>
+    <div className="product-details-container">
+      <img src={product.image} className="product-details-image" />
+      <h2 className="product-details-title">{product.name}</h2>
+      <p className="product-details-description">{product.description}</p>
+      <p className="product-details-price">Preço: R$ {product.price}</p>
       <button
         onClick={() => addToCart(product)}
-        className="bg-green-500 text-white px-4 py-2 mt-2 rounded"
+        className="product-details-price"
       >
         Adicionar ao Carrinho
       </button>

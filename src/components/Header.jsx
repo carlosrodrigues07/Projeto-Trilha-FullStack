@@ -13,6 +13,10 @@ export default function Header() {
         <div className="nav-item">
           <img src="/src/imagem/home.png" alt="Início" />
           <Link to="/">Início</Link>
+
+          <div className="nav-item"></div>
+          <img src="/src/imagem/sobre.png" alt="Sobre" />
+          <Link to="/Sobre">Sobre</Link>
         </div>
         <div className="nav-item">
           <img src="/src/imagem/cart.png" alt="Carrinho" />

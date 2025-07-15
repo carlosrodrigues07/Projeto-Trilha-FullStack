@@ -1,9 +1,7 @@
-// src/pages/Home.jsx
 import { useState, useEffect } from "react";
 import ProductCard from "/src/components/ProductCard";
 import products from "/src/data/products";
-import  "/src/css/Carrossel.css"
-
+import "/src/css/Carrossel.css";
 
 function Home() {
   const banners = [
@@ -13,8 +11,8 @@ function Home() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(8);
 
-  // Muda o banner automaticamente a cada 4 segundos
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % banners.length);
@@ -22,9 +20,13 @@ function Home() {
     return () => clearInterval(interval);
   }, [banners.length]);
 
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 8);
+  };
+
   return (
-    <div>
-      {/* Carrossel de Banners */}
+    <div className="home-page">
+      {/* Carrossel */}
       <div className="carousel">
         <img
           src={banners[currentIndex].src}
@@ -42,12 +44,22 @@ function Home() {
         </div>
       </div>
 
-      {/* Lista de Produtos */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+      {/* Seção de Produtos */}
+      <section className="products-section">
+        <h2 className="products-title">Nossos Produtos</h2>
+
+        <div className="product-grid">
+          {products.slice(0, visibleCount).map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+
+        {visibleCount < products.length && (
+          <button onClick={handleLoadMore} className="load-more-button">
+            Ver mais produtos
+          </button>
+        )}
+      </section>
     </div>
   );
 }
