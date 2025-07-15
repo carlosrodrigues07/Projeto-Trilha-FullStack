@@ -4,7 +4,7 @@ function Cart() {
   const { cart, removeFromCart, total, clearCart } = useCart();
 
   return (
-    <div className="p-4">
+    <div style={{ paddingBottom: "400px" }}>
       <h1>Carrinho de Compras</h1>
       {cart.length === 0 ? (
         <p>Seu carrinho está vazio.</p>

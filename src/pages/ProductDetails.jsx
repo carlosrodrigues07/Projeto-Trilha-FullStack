@@ -10,7 +10,7 @@ function ProductDetails() {
   if (!product) return <p>Produto não encontrado.</p>;
 
   return (
-    <div className="p-4">
+    <div style={{ paddingBottom: "400px" }}>
       <img src={product.image} className="w-full max-w-md mx-auto" />
       <h2>{product.name}</h2>
       <p>{product.description}</p>

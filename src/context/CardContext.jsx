@@ -22,7 +22,10 @@ export function CartProvider({ children }) {
 
   const removeFromCart = (id) => setCart(cart.filter((item) => item.id !== id));
 
-  const clearCart = () => setCart([]);
+  const clearCart = () => {
+    setCart([]);
+    alert("COMPRA CONLCUIDA!");
+  };
 
   const total = cart.reduce((acc, item) => acc + item.quantity * item.price, 0);
 
