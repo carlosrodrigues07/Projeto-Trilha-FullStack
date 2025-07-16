@@ -1,4 +1,4 @@
-# 🖋️ Papelaria Pó de Gis
+# 🖋️ Papelaria Pó de Giz
 ![banner](/src/imagem/capa.png)
 Projeto Final do Modulo **Desenvolvimento Fullstack Intermediário** – Programa **Capacita Brasil**
 
@@ -6,7 +6,7 @@ Projeto Final do Modulo **Desenvolvimento Fullstack Intermediário** – Program
 
 ## 📚 Sobre o Projeto
 
-A **Papelaria Pó de Gis** é uma aplicação web desenvolvida como projeto final do curso Fullstack Intermediário.  
+A **Papelaria Pó de Giz** é uma aplicação web desenvolvida como projeto final do curso Fullstack Intermediário.  
 O sistema simula uma loja de papelaria moderna, com foco em uma experiência de navegação agradável, intuitiva e eficiente para o usuário.
 
 Este projeto aplica conceitos fundamentais do desenvolvimento web moderno, como:
